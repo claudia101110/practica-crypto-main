@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>1. Les meves claus</h2>
+        <button id="btnGenerar">Generar claus</button>
+
+        <label>Clau pública de xifrat</label>
+        <textarea id="miPubCifrado" rows="4" placeholder="La meva clau pública de xifrat" readonly></textarea>
+
+        <label>Clau pública de signatura</label>
+        <textarea id="miPubFirma" rows="4" placeholder="La meva clau pública de signatura" readonly></textarea>
+
+        <label>Clau privada de xifrat</label>
+        <textarea id="miPrivCifrado" rows="4" placeholder="La meva clau privada de xifrat" readonly></textarea>
+
+        <label>Clau privada de signatura</label>
+        <textarea id="miPrivFirma" rows="4" placeholder="La meva clau privada de signatura" readonly></textarea>
+    </section>
+
+    <section>
+        <h2>2. Claus remotes</h2>
+
+        <label>Clau pública de xifrat remota</label>
+        <textarea id="remotaPubCifrado" rows="4"
+            placeholder="Enganxa aquí la clau pública de xifrat de l'altre"></textarea>
+
+        <label>Clau pública de signatura remota</label>
+        <textarea id="remotaPubFirma" rows="4"
+            placeholder="Enganxa aquí la clau pública de signatura de l'altre"></textarea>
+    </section>
+
+    <section>
+        <h2>3. Enviar</h2>
+
+        <label>Missatge</label>
+        <textarea id="mensaje" rows="4" placeholder="Escriu el missatge"></textarea>
+
+        <button id="btnFirmar">Signar</button>
+        <button id="btnCifrar">Xifrar</button>
+
+        <label>Text xifrat</label>
+        <textarea id="salidaCifrada" rows="4" placeholder="Aquí apareixerà el text xifrat" readonly></textarea>
+    </section>
+
+    <section>
+        <h2>4. Rebre</h2>
+
+        <label>Text xifrat rebut</label>
+        <textarea id="entradaCifrada" rows="4" placeholder="Enganxa aquí el text xifrat"></textarea>
+
+        <button id="btnDescifrar">Desxifrar</button>
+
+        <label>Missatge desxifrat</label>
+        <pre id="resultadoMensaje"></pre>
+
+        <label>Estat de la signatura</label>
+        <pre id="resultadoFirma"></pre>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
